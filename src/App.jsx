@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import EntradaTareas from './assets/components/entradatareas';
+import ListaTareas from './assets/components/listatareas';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [tareas, setTareas] = useState([]);
+
+  const agregarTarea = (texto) => {
+    const nuevaTarea = {
+      id: Date.now(),
+      texto,
+      completada: false,
+    };
+    setTareas([...tareas, nuevaTarea]);
+  };
+
+  const alternarTarea = (id) => {
+    setTareas(tareas.map(t =>
+      t.id === id ? { ...t, completada: !t.completada } : t
+    ));
+  };
+
+  const eliminarTarea = (id) => {
+    setTareas(tareas.filter(t => t.id !== id));
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="container">
+      <h1>Lista de Tareas</h1>
+      <EntradaTareas onAgregar={agregarTarea} />
+      <ListaTareas
+        tareas={tareas}
+        onAlternar={alternarTarea}
+        onEliminar={eliminarTarea}
+      />
+    </div>
+  );
 }
-
-export default App
+<input 
+  type="text" 
+  placeholder="Nueva tarea" 
+  style={{ color: 'black', backgroundColor: 'white' }} 
+/>
+export default App;
