@@ -1,4 +1,5 @@
-import Tarea from './tareas';
+import Tarea from './t-tareas';
+import './EntradaTareas.css';
 
 function ListaTareas({ tareas, onAlternar, onEliminar }) {
   return (
@@ -14,9 +15,5 @@ function ListaTareas({ tareas, onAlternar, onEliminar }) {
     </ul>
   );
 }
-<input 
-  type="text" 
-  placeholder="Nueva tarea" 
-  style={{ color: 'black', backgroundColor: 'white' }} 
-/>
+
 export default ListaTareas;

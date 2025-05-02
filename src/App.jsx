@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import EntradaTareas from './assets/components/entradatareas';
-import ListaTareas from './assets/components/listatareas';
+import EntradaTareas from './assets/components/t-entradatareas.jsx';
+import ListaTareas from './assets/components/t-listatareas.jsx';
 import './App.css';
 
 function App() {
