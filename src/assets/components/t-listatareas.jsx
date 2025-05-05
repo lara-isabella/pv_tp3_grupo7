@@ -14,6 +14,5 @@ function ListaTareas({ tareas, onAlternar, onEliminar }) {
   );
 }
 
-
 export default ListaTareas;
 
