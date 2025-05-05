@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
+
 import productosBase from "./p-data";
+
 
 const Producto = () => {
   const [productos, setProductos] = useState(productosBase);
 
+
   const filtrarProductos = () => {
     setProductos(productos.filter(producto => producto.precio > 20));
   };
+
 
   const agregarIVA = () => {
     setProductos(productos.map(producto => ({
@@ -14,6 +18,7 @@ const Producto = () => {
       precio: (producto.precio * 1.21).toFixed(2)
     })));
   };
+
 
   const ordenarProductos = () => {
     setProductos([...productos].sort((a, b) => a.precio - b.precio));
@@ -43,3 +48,4 @@ const Producto = () => {
 };
 
 export default Producto;
+
