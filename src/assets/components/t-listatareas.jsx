@@ -1,6 +1,4 @@
 import Tarea from './t-tareas';
-import './EntradaTareas.css';
-
 function ListaTareas({ tareas, onAlternar, onEliminar }) {
   return (
     <ul>
@@ -16,4 +14,6 @@ function ListaTareas({ tareas, onAlternar, onEliminar }) {
   );
 }
 
+
 export default ListaTareas;
+

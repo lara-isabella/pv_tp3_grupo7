@@ -1,6 +1,10 @@
 import { useState } from 'react';
-import EntradaTareas from './assets/components/t-entradatareas.jsx';
-import ListaTareas from './assets/components/t-listatareas.jsx';
+
+import EntradaTareas from './assets/components/t-entradatareas';
+import ListaTareas from './assets/components/t-listatareas';
+import Producto from './assets/components/p-funcionesproducto';
+
+
 import './App.css';
 
 function App() {
@@ -34,12 +38,13 @@ function App() {
         onAlternar={alternarTarea}
         onEliminar={eliminarTarea}
       />
+
+      <hr />
+
+      <h1>Lista de Productos</h1>
+      <Producto />
     </div>
   );
 }
-<input 
-  type="text" 
-  placeholder="Nueva tarea" 
-  style={{ color: 'black', backgroundColor: 'white' }} 
-/>
+
 export default App;
