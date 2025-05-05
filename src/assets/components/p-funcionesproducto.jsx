@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import productosBase from "./p-data";
 
-
 const Producto = () => {
   const [productos, setProductos] = useState(productosBase);
 
