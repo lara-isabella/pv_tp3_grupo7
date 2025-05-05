@@ -1,4 +1,5 @@
-import Tarea from './tareas';
+import Tarea from './t-tareas';
+// import './EntradaTareas.css'; // Comentado o eliminado si no existe
 
 function ListaTareas({ tareas, onAlternar, onEliminar }) {
   return (

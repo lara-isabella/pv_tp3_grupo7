@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import EntradaTareas from './assets/components/entradatareas';
-import ListaTareas from './assets/components/listatareas';
-import Producto from './assets/components/producto'; // agregá esto
+import EntradaTareas from './assets/components/t-entradatareas';
+import ListaTareas from './assets/components/t-listatareas';
+import Producto from './assets/components/p-funcionesproducto';
 import './App.css';
 
 function App() {
@@ -39,7 +39,7 @@ function App() {
       <hr />
 
       <h1>Lista de Productos</h1>
-      <Producto /> {/* acá se renderiza el componente Producto */}
+      <Producto />
     </div>
   );
 }
