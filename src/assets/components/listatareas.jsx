@@ -14,9 +14,10 @@ function ListaTareas({ tareas, onAlternar, onEliminar }) {
     </ul>
   );
 }
-<input 
-  type="text" 
-  placeholder="Nueva tarea" 
-  style={{ color: 'black', backgroundColor: 'white' }} 
+<input
+  value={texto}
+  onChange={(e) => setTexto(e.target.value)}
+  placeholder="Nueva tarea"
+  type="text"
+  style={{ color: '#dfa0c0', backgroundColor: 'white' }}
 />
-export default ListaTareas;
