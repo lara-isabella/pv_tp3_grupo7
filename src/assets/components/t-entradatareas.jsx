@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 function EntradaTareas({ onAgregar }) {
   const [texto, setTexto] = useState('');
+
   const manejarEnvio = (e) => {
     e.preventDefault();
     if (texto.trim() !== '') {
