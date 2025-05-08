@@ -3,7 +3,6 @@ import EntradaTareas from './assets/components/t-entradatareas';
 import ListaTareas from './assets/components/t-listatareas';
 import Producto from './assets/components/p-funcionesproducto';
 
-
 import './App.css';
 
 function App() {
@@ -29,19 +28,21 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <h1>Lista de Tareas</h1>
-      <EntradaTareas onAgregar={agregarTarea} />
-      <ListaTareas
-        tareas={tareas}
-        onAlternar={alternarTarea}
-        onEliminar={eliminarTarea}
-      />
+    <div className="layout">
+      <div className="container tareas">
+        <h1>Lista de Tareas</h1>
+        <EntradaTareas onAgregar={agregarTarea} />
+        <ListaTareas
+          tareas={tareas}
+          onAlternar={alternarTarea}
+          onEliminar={eliminarTarea}
+        />
+      </div>
 
-      <hr />
-
-      <h1>Lista de Productos</h1>
-      <Producto />
+      <div className="container productos">
+        <h1>Lista de Productos</h1>
+        <Producto />
+      </div>
     </div>
   );
 }
