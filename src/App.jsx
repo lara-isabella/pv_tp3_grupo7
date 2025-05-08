@@ -4,10 +4,8 @@ import ListaTareas from './assets/components/t-listatareas';
 import Producto from './assets/components/p-funcionesproducto';
 
 import './App.css';
-
 function App() {
   const [tareas, setTareas] = useState([]);
-
   const agregarTarea = (texto) => {
     const nuevaTarea = {
       id: Date.now(),
@@ -16,17 +14,14 @@ function App() {
     };
     setTareas([...tareas, nuevaTarea]);
   };
-
   const alternarTarea = (id) => {
     setTareas(tareas.map(t =>
       t.id === id ? { ...t, completada: !t.completada } : t
     ));
   };
-
   const eliminarTarea = (id) => {
     setTareas(tareas.filter(t => t.id !== id));
   };
-
   return (
     <div className="layout">
       <div className="container tareas">
