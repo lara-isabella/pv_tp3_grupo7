@@ -7,11 +7,11 @@ import './App.css';
 
 function App() {
   const [tareas, setTareas] = useState([]);
-  const [contadorId, setContadorId] = useState(1); // Empieza en 1 y aumenta secuencialmente
+  const [contadorId, setContadorId] = useState(1); 
 
   const agregarTarea = (nuevaTarea) => {
-    setTareas(prevTareas => [...prevTareas, nuevaTarea]); // Mantiene el estado anterior
-    setContadorId(prevId => prevId + 1); // Incrementamos el ID correctamente
+    setTareas(prevTareas => [...prevTareas, nuevaTarea]);
+    setContadorId(prevId => prevId + 1); 
   };
 
   const alternarTarea = (id) => {
