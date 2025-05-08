@@ -1,32 +1,40 @@
+/* Estilos generales */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fff0f5; /* rosa claro */
-  color: #c71585; /* fucsia */
+  background-color: #fff0f5; /* Rosa claro */
+  color: #c71585; /* Fucsia */
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   padding: 50px;
   margin: 0;
 }
+
+/* Contenedor principal */
 .container {
   background-color: #ffe1f0;
-  padding: 30px;
+  padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 20px rgba(199, 21, 133, 0.2);
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
   box-sizing: border-box;
 }
 
+/* Títulos */
 h1 {
-  font-size: 26px;
+  font-size: 28px;
   margin-bottom: 20px;
   text-align: center;
   color: #a0006d;
+  font-weight: bold;
 }
 
+/* Formulario de entrada */
 form {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   justify-content: center;
   align-items: center;
   margin: 1.5rem 0;
@@ -34,34 +42,39 @@ form {
 
 input[type="text"] {
   flex: 1;
-  border: 1px solid #c71585;
+  border: 2px solid #c71585;
   padding: 10px;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 16px;
   color: #a0006d;
   background-color: #fff;
   outline: none;
-  transition: border 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 input[type="text"]:focus {
   border-color: #a0006d;
+  box-shadow: 0 0 8px rgba(160, 0, 109, 0.3);
 }
 
+/* Botones */
 button {
-  background-color: #dfa0c0;
+  background-color: #c71585;
   color: #fff;
-  padding: 10px 14px;
+  padding: 10px 16px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
-  background-color: #c71585;
+  background-color: #a0006d;
+  transform: scale(1.05);
 }
 
+/* Lista de tareas */
 ul {
   list-style: none;
   padding: 0;
@@ -71,8 +84,11 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 0;
-  border-bottom: 1px solid #f3cce5;
+  padding: 12px;
+  background: #ffe7f5;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(199, 21, 133, 0.1);
 }
 
 li span {
@@ -85,13 +101,13 @@ li span {
   color: #999;
 }
 
+/* Diseño responsivo */
 .layout {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 24px;
   flex-wrap: wrap;
 }
-
 
 @media (max-width: 768px) {
   .layout {
@@ -103,4 +119,3 @@ li span {
 .tareas, .productos {
   flex: 1;
 }
-
