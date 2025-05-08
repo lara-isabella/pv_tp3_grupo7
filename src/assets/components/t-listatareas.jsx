@@ -1,4 +1,5 @@
 import Tarea from './t-tareas';
+
 function ListaTareas({ tareas, onAlternar, onEliminar }) {
   return (
     <ul>
@@ -15,4 +16,3 @@ function ListaTareas({ tareas, onAlternar, onEliminar }) {
 }
 
 export default ListaTareas;
-
