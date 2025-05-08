@@ -1,6 +1,6 @@
 # Trabajo Práctico - Lista de Tareas y Productos
 
-Este proyecto es parte del trabajo práctico grupal para la materia [Nombre de la materia].  
+Este proyecto es parte del trabajo práctico grupal para la materia Programacion Visual.  
 El objetivo es construir una aplicación web utilizando React y Vite, que permita gestionar una lista de tareas y productos.
 
 ##  Integrantes del grupo
