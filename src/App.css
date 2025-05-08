@@ -1,8 +1,7 @@
-/* Estilos generales */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fff0f5; /* Rosa claro */
-  color: #c71585; /* Fucsia */
+  background-color: #fff0f5; 
+  color: #c71585; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,7 +10,6 @@ body {
   margin: 0;
 }
 
-/* Contenedor principal */
 .container {
   background-color: #ffe1f0;
   padding: 25px;
@@ -22,7 +20,6 @@ body {
   box-sizing: border-box;
 }
 
-/* Títulos */
 h1 {
   font-size: 28px;
   margin-bottom: 20px;
@@ -31,7 +28,6 @@ h1 {
   font-weight: bold;
 }
 
-/* Formulario de entrada */
 form {
   display: flex;
   gap: 12px;
@@ -57,7 +53,6 @@ input[type="text"]:focus {
   box-shadow: 0 0 8px rgba(160, 0, 109, 0.3);
 }
 
-/* Botones */
 button {
   background-color: #c71585;
   color: #fff;
@@ -74,7 +69,6 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* Lista de tareas */
 ul {
   list-style: none;
   padding: 0;
